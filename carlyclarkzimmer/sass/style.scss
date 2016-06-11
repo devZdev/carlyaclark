@@ -11,6 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 /* Global reset */
 /* Based upon 'reset.css' in the Yahoo! User Interface Library: http://developer.yahoo.com/yui */
+$accent-color: #EF9D87;
 
 *, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td {
   margin: 0;
@@ -94,7 +95,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #EF9D87;
+  color: $accent-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -178,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
       -webkit-transition: .3s;
     }
     &.current-menu-item a, &.current_page_item a, a:hover {
-      color: #EF9D87;
+      color: $accent-color;
     }
   }
   .sub-menu, .children {
@@ -218,7 +219,7 @@ ul.menu ul li, .menu ul ul li {
 
 ul.menu ul a:hover, .menu ul ul a:hover {
   color: #fff;
-  background: #EF9D87;
+  background: $accent-color;
 }
 
 ul.menu li:hover > ul {
@@ -249,7 +250,7 @@ ul.menu li:hover > ul {
     color: #c2c2c2;
     margin-left: 8px;
     &:hover {
-      color: #EF9D87;
+      color: $accent-color;
     }
   }
 }
@@ -270,7 +271,7 @@ ul.menu li:hover > ul {
     font-size: 14px;
     line-height: 50px;
     color: #fff;
-    background: #EF9D87;
+    background: $accent-color;
     display: block;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
@@ -410,10 +411,10 @@ ul.menu li:hover > ul {
   -moz-transition: .3s;
   -webkit-transition: .3s;
   &:hover {
-    background: #EF9D87;
+    background: $accent-color;
     color: #fff;
     border: 1px solid;
-    border-color: #EF9D87;
+    border-color: $accent-color;
   }
 }
 
@@ -458,7 +459,7 @@ ul.menu li:hover > ul {
   }
   blockquote {
     border-left: 3px solid;
-    border-color: #EF9D87;
+    border-color: $accent-color;
     p {
       color: #999;
       padding: 0 18px;
@@ -540,9 +541,9 @@ ul.menu li:hover > ul {
     -moz-transition: .3s;
     -webkit-transition: .3s;
     &:hover {
-      background: #EF9D87;
+      background: $accent-color;
       color: #fff;
-      border: 1px solid #EF9D87;
+      border: 1px solid $accent-color;
     }
   }
 }
@@ -582,7 +583,7 @@ ul.menu li:hover > ul {
     margin-right: 8px;
   }
   a.author-social:hover {
-    color: #EF9D87;
+    color: $accent-color;
   }
 }
 
@@ -613,7 +614,7 @@ ul.menu li:hover > ul {
     text-align: right;
   }
   a:hover {
-    background: #EF9D87;
+    background: $accent-color;
     color: #fff;
   }
 }
@@ -1035,7 +1036,7 @@ ul.children {
     &:hover {
       text-decoration: none;
       color: #fff;
-      background: #EF9D87;
+      background: $accent-color;
     }
   }
   .newer {
@@ -1131,7 +1132,7 @@ ul.children {
       width: 28px;
       text-align: center;
       line-height: 28px;
-      background: #ef9d87;
+      background: $accent-color;
       color: #fff;
       border-radius: 50%;
       margin: 0 2px 4px;
@@ -1221,7 +1222,7 @@ ul.children {
   font-size: 10px !important;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: #EF9D87;
+  background: $accent-color;
   color: #fff;
   padding: 6px 8px 7px;
   margin-right: 5px;
@@ -1346,7 +1347,7 @@ ul.children {
 }
 
 .widget-gift-certificate-link {
-  color: #EF9D87;
+  color: $accent-color;
   font-size: 19px;
 }
 
@@ -1358,7 +1359,7 @@ ul.children {
 
 #footer-social {
   padding: 30px 0;
-  background: #EF9D87;
+  background: $accent-color;
   text-align: center;
   a {
     margin: 0 36px 0 0;
@@ -1385,7 +1386,7 @@ ul.children {
       text-align: center;
       line-height: 28px;
       background: #fff;
-      color: #EF9D87;
+      color: $accent-color;
       border-radius: 50%;
       margin-right: 5px;
       font-size: 14px;
@@ -1474,19 +1475,30 @@ ul.children {
 /************************/
 
 .wpcf7 input {
-  width: 266px;
+  width: 200px;
 }
 
 div.wpcf7 {
   overflow: hidden;
-  margin-top: 40px;
 }
 
 .wpcf7 {
+  &.opt-in {
+    font-size: 13px;
+    background-color: $accent-color;
+    padding: 4px 0;
+    text-align: center;
+    margin: 10px 0 40px 0;
+
+    label {
+      color: #fff;
+    }
+  }
+
   input {
     padding: 8px;
     border: 1px solid #DDD;
-    margin-right: 10px;
+    margin: 0 10px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -1530,6 +1542,14 @@ div.wpcf7 {
     &:hover {
       background: #333;
       color: #fff;
+    }
+  }
+  &.inline {
+    .input-wrapper {
+      display: inline-block;
+    }
+    .wpcf7-submit {
+      display: inline-block;
     }
   }
 }
@@ -1633,7 +1653,7 @@ a img {
     width: 50%;
     color: #fff;
     border: none;
-    background-color: #EF9D87;
+    background-color: $accent-color;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -1679,10 +1699,10 @@ a img {
   -moz-transition: .3s;
   -webkit-transition: .3s;
   &:hover {
-    background: #EF9D87;
+    background: $accent-color;
     color: #fff;
     border: 1px solid;
-    border-color: #EF9D87;
+    border-color: $accent-color;
   }
 }
 

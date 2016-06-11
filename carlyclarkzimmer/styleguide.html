@@ -20,24 +20,64 @@
   <body id="index" class="home">
     <div class="page">
       <h1>Styleguide</h1>
+      <h2>Typography</h2>
+      <h3>Headings</h3>
+      <h4>Post Header</h4>
+      <h3>Links</h3>
       <h2>Forms</h2>
       <h3>Opt-In (Inline)</h3>
-      <div class="opt-in inline">
-        <div class="hed">Get the Goods!</div>
-        <div class="dek">Subscribe to get exclusive access to videos and eBooks.</div>
-        <form action="http://carlyclarkzimmer.us7.list-manage1.com/subscribe/post" method="POST">
-          <input type="hidden" name="u" value="cf9dd5ccfe47a138c955e9044">
-          <input type="hidden" name="id" value="66c205e04f">
-          <label for="MERGE1">First Name</label>
-          <input type="text" name="MERGE1" id="MERGE1" size="25" value="">
-          <label for="MERGE0">Email Address</label>
-          <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
-          <div class="hidden">
-            <input type="text" name="b_cf9dd5ccfe47a138c955e9044_66c205e04f" tabindex="-1" value="">
+
+<!-- Form copied from http://devzdev.github.io/carlyaclark/carlyclarkzimmer/styleguide.html -->
+<div class="opt-in inline wpcf7">
+  <form action="https://carlyclarkzimmer.us7.list-manage1.com/subscribe/post" method="POST">
+    <input type="hidden" name="u" value="cf9dd5ccfe47a138c955e9044">
+    <input type="hidden" name="id" value="66c205e04f">
+    <div class="input-wrapper">
+      <label for="MERGE1">Name: </label>
+      <input type="text" name="MERGE1" id="MERGE1" size="25" value="" aria-required="true" aria-invalid="false" />
+    </div>
+    <div class="input-wrapper">
+      <label for="MERGE0">Email: </label>
+      <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" />
+    </div>
+    <div class="hidden">
+      <input type="text" name="b_cf9dd5ccfe47a138c955e9044_66c205e04f" tabindex="-1" value="" />
+    </div>
+    <input class="wpcf7-submit" type="submit" name="submit" value="Subscribe to list" />
+  </form>
+</div>
+<!-- End Form -->
+
+      <h2>Buttons</h2>
+      <h3>Primary Button</h3>
+      <a href="#" class="more-link">
+        <span class="more-button">Continue Reading</span>
+      </a>
+      <h2>Components</h2>
+      <h3>Article Teaser</h3>
+      <article id="post-54" class="post-54 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
+        <div class="post-header">
+          <span class="cat"><a href="#" rel="category tag">Music</a></span>
+          <h2><a href="">Summer Outfit</a></h2>
+        </div>
+        <div class="post-entry">
+          <p>Tonx cray commodo, exercitation you probably haven’t heard of them beard cred. Selfies iPhone Kickstarter, drinking vinegar jean shorts fixie consequat flexitarian four loko disrupt dreamcatcher beard craft beer stumptown. Paleo 90′s bitters eu, yr incididunt YOLO sapiente fingerstache.</p>
+          <p>Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag.</p>
+          <p><a href="#" class="more-link"><span class="more-button">Continue Reading</span></a></p>
+        </div>
+        <div class="post-meta">
+          <span class="meta-info">June 20, 2017 by 
+            <a href="#" title="Posts by Carly" rel="author">Carly</a>
+          </span>
+          <div class="post-share">
+            <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+            <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+            <a target="_blank" href="#"></i></a>
+            <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-comments"></i></a>     
           </div>
-          <input type="submit" name="submit" value="Subscribe to list">
-        </form>
-      </div>
+        </div>
+      </article>
     </div>
   </body>
   <!-- JS -->

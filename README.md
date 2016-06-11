@@ -2,7 +2,7 @@
 
 This project aims to keep style changes under version control. We are using sass to compose style.
 
-<a href="http://devzdev.github.io/carlyaclark/">Styleguide</a>
+<a href="http://devzdev.github.io/carlyaclark/carlyclarkzimmer/styleguide.html">Styleguide</a>
 
 You must compile your sass stylesheets into CSS when they change.
 This can be done in one of the following ways:
